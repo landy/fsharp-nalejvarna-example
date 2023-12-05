@@ -1,6 +1,22 @@
+### Get List of books
+GET http://localhost:5000/api/books
+
+### Create book
 POST http://localhost:5000/api/books
 
 {
     "title": "Book 1",
     "author": "Author 1",
 }
+
+
+### Invalid book
+POST http://localhost:5000/api/books
+
+{
+    "title": "Book 1",
+    "author": "",
+}
+
+### Book detail
+GET http://localhost:5000/api/book/d8e7858a-356d-48fa-899f-ed5ae2cc594e

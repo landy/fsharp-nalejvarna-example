@@ -54,3 +54,23 @@ type BooksStorage(connection: SqlConnection) =
 
             return ()
         }
+
+    member _.Get (bookId: Guid) =
+        task {
+            let! rows =
+                select {
+                    for book in booksTable do
+                    where (book.Id = bookId)
+                }
+                |> connection.SelectAsync<BookRow>
+
+            return
+                rows
+                |> List.ofSeq
+                |> List.tryHead
+                |> Option.map (fun row -> {
+                    BookDetail.Id = row.Id
+                    BookDetail.Title = row.Title
+                    BookDetail.Author = row.Author
+                })
+        }
