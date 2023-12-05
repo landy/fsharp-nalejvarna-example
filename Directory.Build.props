@@ -1,14 +1,19 @@
 <Project>
-  <!-- See https://aka.ms/dotnet/msbuild/customize for more details on customizing your build -->
-  <PropertyGroup>
+    <!-- See https://aka.ms/dotnet/msbuild/customize for more details on customizing your build -->
+    <PropertyGroup>
 
-    <ArtifactsPath>$(MSBuildThisFileDirectory)artifacts</ArtifactsPath>
-    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <ArtifactsPath>$(MSBuildThisFileDirectory)artifacts</ArtifactsPath>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
 
-    <RootNamespace>FSharpNalejvarna</RootNamespace>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageReference Include="FSharp.Core" Version="8.0.100" />
-  </ItemGroup>
+        <RootNamespace>FSharpNalejvarna</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+        <PackageReference Include="FSharp.Core" Version="8.0.100"/>
+        <PackageReference Include="Giraffe" Version="6.2.0"/>
+        <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+        <PackageReference Include="Dapper" Version="2.1.24" />
+        <PackageReference Include="Dapper.FSharp" Version="4.7.0" />
+        <PackageReference Include="Giraffe.GoodRead" Version="2.1.0" />
+    </ItemGroup>
 </Project>

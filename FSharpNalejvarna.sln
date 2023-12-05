@@ -7,11 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36944073-0FE
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MvcApp", "src\MvcApp\MvcApp.fsproj", "{4AF4442D-C283-4AB0-8590-0CA300FB2085}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MinimalApp", "src\MinimalApp\MinimalApp.fsproj", "{600AAE27-4B83-4277-A32D-B4E2940C8837}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MinimalApiApp", "src\MinimalApiApp\MinimalApiApp.fsproj", "{600AAE27-4B83-4277-A32D-B4E2940C8837}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GiraffeApp", "src\GiraffeApp\GiraffeApp.fsproj", "{8E7F8FA1-E970-45EF-80E9-619808790CE6}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Core", "src\Core\Core.fsproj", "{0B212B05-4735-4943-9910-BEDA3D08F923}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{DBDDDE12-5C80-434B-BAEE-E533D0FC1D24}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

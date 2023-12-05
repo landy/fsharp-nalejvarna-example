@@ -2,14 +2,18 @@ namespace FSharpNalejvarna.MvcApp.Books
 
 open Microsoft.AspNetCore.Mvc
 
-open FSharpNalejvarna.MvcApp
 open FSharpNalejvarna.Core.Books
 
 
-type BooksController () =
-    inherit ApiController()
-    
+[<Route("api/books")>]
+type BooksController(facade:BooksFacade) =
+    inherit ControllerBase()
+
     [<HttpGet>]
-    member _.GetList() = task {
-        return List.empty<BookListItem>
-    }
+    [<Route("")>]
+    member _.GetList () =
+        task {
+            let! books = facade.GetBooks()
+
+            return books
+        }

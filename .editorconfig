@@ -1,0 +1,22 @@
+root = true
+
+
+[*]
+indent_style = space
+indent_size = 4
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = false
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[*.json]
+indent_size = 2
+
+[*.{fs,fsx}]
+max_line_length = 80
+fsharp_array_or_list_multiline_formatter = number_of_items
+fsharp_multiline_bracket_style = stroustrup
+fsharp_space_before_member = true
+
