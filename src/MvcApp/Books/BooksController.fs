@@ -6,7 +6,7 @@ open FSharpNalejvarna.Core.Books
 
 
 [<Route("api/books")>]
-type BooksController(facade:BooksFacade) =
+type BooksController(facade: BooksFacade) =
     inherit ControllerBase()
 
     [<HttpGet>]

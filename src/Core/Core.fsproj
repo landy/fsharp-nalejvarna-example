@@ -8,6 +8,7 @@
 
     <ItemGroup>
         <Compile Include="Books\BooksList.fs"/>
+        <Compile Include="Books\AddBook.fs"/>
         <Compile Include="Books\Storage.fs"/>
         <Compile Include="Books\Facade.fs"/>
         <Compile Include="AppExtensions.fs"/>

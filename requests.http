@@ -1,0 +1,6 @@
+POST http://localhost:5000/api/books
+
+{
+    "title": "Book 1",
+    "author": "Author 1",
+}

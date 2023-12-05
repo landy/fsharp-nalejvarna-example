@@ -36,3 +36,21 @@ type BooksStorage(connection: SqlConnection) =
 
             return items
         }
+
+    member _.Create (bookId: Guid) (book: AddBook.ValidatedBook) : Task<unit> =
+        task {
+            let row = {
+                Id = bookId
+                Title = book.Title
+                Author = book.Author
+            }
+
+            let! _ =
+                insert {
+                    into booksTable
+                    value row
+                }
+                |> connection.InsertAsync
+
+            return ()
+        }

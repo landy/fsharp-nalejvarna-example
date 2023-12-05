@@ -9,4 +9,4 @@ type BookEndpoints() =
         task { return! facade.GetBooks() }
 
     static member RegisterBooksEndpoints (app: WebApplication) =
-        app.MapGet("/api/books", Func<_,_>(BookEndpoints.GetList))
+        app.MapGet("/api/books", Func<_, _>(BookEndpoints.GetList))

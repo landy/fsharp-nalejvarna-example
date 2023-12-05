@@ -1,13 +1,13 @@
 services:
-    mssql:
-        image: mcr.microsoft.com/mssql/server:2022-latest
-        environment:
-        - ACCEPT_EULA=Y
-        - SA_PASSWORD=Password123
-        ports:
-        - "1433:1433"
-        volumes:
-          - my-volume:/var/opt/mssql
-        platform: linux/amd64
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password123
+    ports:
+      - "1433:1433"
+    volumes:
+      - my-volume:/var/opt/mssql
+    platform: linux/amd64
 volumes:
-    my-volume:
+  my-volume:
